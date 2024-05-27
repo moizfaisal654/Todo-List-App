@@ -1,0 +1,157 @@
+:root{
+    --dark:#374151;
+    --darker:#1F2937;
+    --darkest:#111827;
+    --gray:#6B7280;
+    --light:#EEE;
+    --pink:#EC4899;
+    --purple:#8B5CF6;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background: var(--dark);
+    color: var(--light);
+}
+header{
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+header h1{
+    color: var(--gray);
+}
+input,button{
+    border: none;
+    outline: none;
+    background: none;
+    appearance: none;
+}
+input.create-task{
+    font-size: 21px;
+    border-radius: 30px;
+    margin: 5px -60px;
+    padding: 15px 60px;
+    background: var(--darkest);
+    color: var(--light);
+}
+input.create-task::placeholder{
+    color: var(--gray);
+}
+input.submit-task{
+    margin-left: 90px;
+    cursor: pointer;
+    color: var(--pink);
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input.submit-task:hover{
+  opacity: 0.8;
+}
+input.submit-task:active{
+    opacity: 0.6;
+  }
+  main{
+    padding: 20px 20%;
+  }
+main h2{
+margin-left: 12%;
+font-size: 27px;
+font-weight: 700;
+color: var(--light);
+}  
+
+.task-content {
+    width: 610px;
+    display: flex;
+    background: var(--darkest);
+    padding: 0;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+.text{
+    margin: 10px;
+    font-size: 18px;
+    padding: 10px 30px;
+    background: var(--darkest);
+    color: var(--light);
+}
+.content input::placeholder{
+    color: var(--gray);
+}
+.actions {
+    margin: 20px auto;
+}
+button.edit{
+    cursor: pointer;
+    color: var(--pink);
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+button.delete{
+    margin-left: 30px; 
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk tablet  00000000000000000000000000000000000000000000 */
+@media only screen and (min-width:768px) and (max-width:991px){
+    
+    main {
+        padding: 14px 9%;
+    }
+}
+
+
+/*__________________________________ for mobile_____________________________________________________ */
+@media only screen and (max-width:767px){
+
+    input.create-task {
+        font-size: 14px;
+        margin: 5px 11px;
+        padding: 15px 21px;
+    }
+    input.submit-task {
+        margin-left: -9px;
+        font-size: 14px;
+    }
+    main {
+        padding: 8px 15px;
+    }
+    .text {
+        margin: 5px 15px;
+        font-size: 14px;
+        padding: 4px 0px;
+    }
+    
+    .task-content {
+        width: 290px;
+        display: block;
+    }
+    .actions {
+        padding: 12px 20px;
+        margin: 0;
+    }
+    button.edit {
+        font-size: 15px;
+    }
+    button.delete {
+        font-size: 15px;
+    }
+}
